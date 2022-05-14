@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TV Maze</title>
+    <link rel="stylesheet"
+      href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+  </head>
+  <body class="bg-dark">
+    <div class="container text-white">
+
+    <h1>TV Maze</h1>
+
+    <form class="input-group mb-3" id="search-form">
+      <input class="form-control" id="search-query" value="smallville">
+      <div class="input-group-append">
+      <button class="btn btn-info" type="submit" id="button-addon2">Go!</button>
+      </div>
+    </form>
+
+    <div class="row mt-3" id="shows-list">
+    </div>
+
+    <section style="display: none" id="info-area">
+      <h2 id="infoAreaHeader"></h2> 
+      <ul id="info-list">
+      </ul>
+    </section>  
+
+    <script src="http://unpkg.com/jquery"></script>
+    <script src="http://unpkg.com/axios/dist/axios.js"></script>
+    <script src="tvmaze.js"></script>
+
+    </div>
+
+  </body>
+</html>
