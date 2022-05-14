@@ -118,6 +118,15 @@ async function getCastOfShow(id){
 function populateEpisodes(episodes) { 
   $infoList.empty()
   $infoAreHeader.text("Episodes")
+
+  if(episodes.length === 0) {
+    let episodeListItem = document.createElement("li")
+    episodeListItem.innerText = `There is no episode information available`
+    $infoList.append(episodeListItem)
+
+    $infoList.append(episodeListItem)
+  }
+
   for(let episodeItem of [episodes]){
     for(let episode of episodeItem){
       let episodeListItem = document.createElement("li")
