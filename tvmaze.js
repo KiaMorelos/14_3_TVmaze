@@ -127,15 +127,14 @@ function populateEpisodes(episodes) {
     $infoList.append(episodeListItem)
   }
 
-  for(let episodeItem of [episodes]){
-    for(let episode of episodeItem){
+ 
+    for(let episode of episodes){
       let episodeListItem = document.createElement("li")
 
       episodeListItem.innerText = `${episode.title} (Season ${episode.season}, Episode ${episode.num})`
       $infoList.append(episodeListItem)
     }
-   
-  }
+
   $infoArea.show();
 
 }
@@ -152,14 +151,13 @@ function populateCast(cast) {
     $infoList.append(castListItem)
   }
 
-  for(let castArr of [cast]){
-    for(let castMem of castArr){
+    for(let castMem of cast){
       let castListItem = document.createElement("li")
 
       castListItem.innerText = `${castMem.actor} as ${castMem.character}`
       $infoList.append(castListItem)
     }
-  }
+  
   $infoArea.show();
 }
 
